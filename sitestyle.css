@@ -1,1 +1,90 @@
+body {
+  background-color: rgb(211, 222, 226);
+}
 
+.headerclass {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+table,
+th,
+td {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+}
+
+.div2 {
+  background-color: rgb(211, 222, 226);
+  margin-top: 20px;
+}
+
+/* Стилі для каруселі */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: visible;
+  /* Дозволяє кнопкам бути поза межами контейнера */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button-left {
+  left: -40px;
+  /* Розташування кнопки поза межами каруселі ліворуч */
+}
+
+.carousel-button-right {
+  right: -40px;
+  /* Розташування кнопки поза межами каруселі праворуч */
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .carousel-container {
+    max-width: 100%;
+  }
+
+  .carousel-button {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
